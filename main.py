@@ -47,5 +47,5 @@ def primera_jugada():
          print("Has ganado!")
     else:
         print("Has perdido!")
-
 primera_jugada()    
+
