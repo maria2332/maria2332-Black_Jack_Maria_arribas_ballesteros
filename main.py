@@ -48,4 +48,3 @@ def primera_jugada():
     else:
         print("Has perdido!")
 primera_jugada()    
-
