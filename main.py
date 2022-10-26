@@ -30,3 +30,22 @@ def entregar_carta(entregas):
         carta[int(i)] = seleccion_carta()[0]
         score += seleccion_carta()[1]
     return carta, score
+
+def mostrar_cartas(usuario, resultado, entregas):
+    carta, score = entregar_carta(entregas)
+    print(usuario, end=" ")
+    print(carta, end=" ")
+    print(resultado, score)
+    return carta, score
+
+def primera_jugada():
+    mis_cartas, mi_score = mostrar_cartas("Ha obtenido:", " >>> su puntuación es de", 2)
+    banca_cartas, banca_score = mostrar_cartas("La banca tiene:", " >>> su puntuación es de", 2)
+    if mi_score == 21 and mi_score != banca_score:
+        print("Blackjack! Has Ganado!")
+    elif banca_score < mi_score :
+         print("Has ganado!")
+    else:
+        print("Has perdido!")
+
+primera_jugada()    
